@@ -11,7 +11,7 @@ const cfg = Config.get();
 export const Shell = ({ 
     lines,            // queue of lines to display
     accents = [],      // mask for characters to accent = zero
-    config = {cfg}       // config object
+    config = cfg       // config object
     }) => {
     return (
         <div className='trashShell'> 
@@ -19,7 +19,7 @@ export const Shell = ({
                 lines.slice(config.gridSize)
                 .map((line, i) => {                 // each line max 100 char
                     const chars = line.split('');
-                    chars.map((ch, j) => {
+                    return chars.map((ch, j) => {
                         let mark = false;
                         if ( (i * 100 + j) in accents ) {mark = true;}
 
