@@ -1,0 +1,7 @@
+.trashShell {
+    display: grid;
+}
+.trashChar {
+    width: 24.5px;
+    border: 0.5px solid;
+}
